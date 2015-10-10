@@ -56,3 +56,4 @@ Pour finir, mettez les droits sur les répertoires cache et logs du répertoire 
 Voyons si notre environnement est bien configuré, avec la commande check.php:
 <pre class="lang:default decode:true ">php app/check.php</pre>
 &nbsp;
+http://khadimdev.com/blogdev/2015/10/10/symfony2-installation-sous-linux-ubuntu/
