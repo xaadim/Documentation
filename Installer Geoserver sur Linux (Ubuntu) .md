@@ -1,8 +1,8 @@
 ### Pré-requis:
-<h6>Une distribution Linux (Ubuntu 16.6 dans cet exemple)</h6> http://www.ubuntu.com/download/desktop
-<h4>Un environnement Java installé</h4> http://openjdk.java.net/
-<h4>Geoserver</h4> http://geoserver.org/release/stable/
-<h4>Si vous êtes sur Windows, nous allon installer Ubuntu via Virtuabox</h4> https://www.virtualbox.org/
+<h6>* Une distribution Linux (Ubuntu 16.6 dans cet exemple)</h6> http://www.ubuntu.com/download/desktop
+<h6>* Un environnement Java installé</h6> http://openjdk.java.net/
+<h6>* Geoserver</h6> http://geoserver.org/release/stable/
+<h6>* Si vous êtes sur Windows, nous allon installer Ubuntu via Virtuabox</h6> https://www.virtualbox.org/
 
 
 Pour installer Geoserver assurez-vous que l'environnement Java est d'abord installé. L'Oracle JRE est préférable, mais OpenJDK marche très bien et il est très simple à installer.
