@@ -1,5 +1,7 @@
 ### Pré-requis:
-
+<h4><strong>Une distribution Linux (Ubuntu 16.6 dans cet exemple) </strong></h4> http://khadimdev.com/blogdev/2015/10/10/symfony2-installation-sous-linux-ubuntu/
+<h4><strong>Un environnement Java installé</strong></h4> http://khadimdev.com/blogdev/2015/10/10/symfony2-installation-sous-linux-ubuntu/
+<h4><strong>Geoserver</strong></h4> http://khadimdev.com/blogdev/2015/10/10/symfony2-installation-sous-linux-ubuntu/
 
 Pour installer Geoserver assurez-vous que l'environnement Java est installé. L'Oracle JRE est préférable, mais OpenJDK marche très bien et il est très simple à installer.
 
