@@ -1,13 +1,13 @@
 ### Pré-requis:
-<h4><strong>Une distribution Linux (Ubuntu 16.6 dans cet exemple) </strong></h4> http://khadimdev.com/blogdev/2015/10/10/symfony2-installation-sous-linux-ubuntu/
-<h4><strong>Un environnement Java installé</strong></h4> http://khadimdev.com/blogdev/2015/10/10/symfony2-installation-sous-linux-ubuntu/
-<h4><strong>Geoserver</strong></h4> http://khadimdev.com/blogdev/2015/10/10/symfony2-installation-sous-linux-ubuntu/
+<h6>Une distribution Linux (Ubuntu 16.6 dans cet exemple)</h6> http://www.ubuntu.com/download/desktop
+<h4>Un environnement Java installé</h4> http://openjdk.java.net/
+<h4>Geoserver</h4> http://geoserver.org/release/stable/
+<h4>Si vous êtes sur Windows, nous allon installer Ubuntu via Virtuabox</h4> https://www.virtualbox.org/
 
-Pour installer Geoserver assurez-vous que l'environnement Java est installé. L'Oracle JRE est préférable, mais OpenJDK marche très bien et il est très simple à installer.
 
+Pour installer Geoserver assurez-vous que l'environnement Java est d'abord installé. L'Oracle JRE est préférable, mais OpenJDK marche très bien et il est très simple à installer.
 
-Pour installer Symfony2, il faut d'abord un environnement de travail qui va accueillir l'installation du Framework.
-<h4><strong>1- Installation PHP, Apache et MySql/PostgreSQL/PostGis</strong></h4>
+<h4><strong>1- Installation de OpenJDK</strong></h4>
 Installons d'abord les paquets nécessaires au fonctionnement de l'application. Nous allons utiliser les lignes de commande. Pour la base gestion de la base de données, nous êtes libre de choisir entre MySql ou PostgreSql. Dans cet exemple, nous installons MySql.
 
 Lançons les commandes maintenant avec sudo qui permet d'avoir tous les droits nécessaires pour installer ces paquets:
