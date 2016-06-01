@@ -16,12 +16,10 @@ Pour installer Geoserver assurez-vous que l'environnement Java est d'abord insta
 
 Vous pouvez aussi à partir des outils disponibles, créer une clé usb de démarrage pour installer Ubuntu à côté de votre Windows, voir (http://www.linuxliveusb.com/fr/home).
 
-
-<pre class="lang:default decode:true">sudo apt-get install apache2
-sudo apt-get install php5
-sudo apt-get install libapache2-mod-php5
-sudo apt-get install mysql-server
-sudo apt-get install php5-mysql
-sudo apt-get install php-apc
-sudo apt-get install php5-intl
+<h4><strong>2- Installation de OpenJDK</strong></h4>
+Ouvrez votre terminal dans Ubuntu et lancez la commande suivante pour installer l'environnement Java OpenJDK:
+<pre class="lang:default decode:true">
+sudo apt-get install openjdk-8-jre
 </pre>
+
+<h4><strong>3- Installation de Geoserver</strong></h4>
