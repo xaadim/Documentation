@@ -5,7 +5,7 @@
 <h6>* Si vous êtes sur Windows, nous allon installer Ubuntu via Virtualbox</h6> https://www.virtualbox.org/
 
 
-Pour installer Geoserver assurez-vous que l'environnement Java est d'abord installé. L'Oracle JRE est préférable, mais OpenJDK marche très bien et il est très simple à installer.
+Pour installer Geoserver assurez-vous que l'environnement Java est d'abord installé. L'Oracle JRE est préférable, mais OpenJDK marche très bien et il est très simple à installer..
 
 <h4><strong>1- Installation de Ubuntu 16.6 sur une machine virtuelle</strong></h4>
 - Télécharger et installer VirtualBox (https://www.virtualbox.org/)
