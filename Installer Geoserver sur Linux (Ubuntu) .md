@@ -1,4 +1,8 @@
-Dans cet article, je vous montre une installation rapide du Framework Symfony2 sur une distribution Ubuntu. Le même processus d’installation peut être utilisé pour les autres distributions de Linux.
+### Pré-requis:
+
+
+Pour installer Geoserver assurez-vous que l'environnement Java est installé. L'Oracle JRE est préférable, mais OpenJDK marche très bien et il est très simple à installer.
+
 
 Pour installer Symfony2, il faut d'abord un environnement de travail qui va accueillir l'installation du Framework.
 <h4><strong>1- Installation PHP, Apache et MySql/PostgreSQL/PostGis</strong></h4>
