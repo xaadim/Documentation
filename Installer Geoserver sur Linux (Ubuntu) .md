@@ -23,3 +23,10 @@ sudo apt-get install openjdk-8-jre
 </pre>
 
 <h4><strong>3- Installation de Geoserver</strong></h4>
+Maintenant, vous pouvez installer Geoserver. 
+- Sélectionnez la version de GeoServer que vous souhaitez télécharger. Si vous n'êtes pas sûr, sélectionnez Stable http://geoserver.org/release/stable/.
+- Sélectionnez .. Platform Independent Binary ​​ sur la page de téléchargement.
+- Téléchargez l'archive et décompressez dans le répertoire où vous souhaitez que le programme soit situé. Alors de préférence, il faut déplacer le dossier dans /usr/share/geoserver.
+- Pour se faire, utilisez la commande <pre class="lang:default decode:true">
+sudo mv /repertoire-avant/geoserver-xx /usr/share/geoserver 
+</pre>
