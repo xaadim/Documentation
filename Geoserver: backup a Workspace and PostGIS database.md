@@ -6,7 +6,7 @@ Nous essayons de récuperer le workspace de SDIS35 dans cet exemple. La premièr
 		sudo find / -name "geoserver*"
 	</pre>
 - depuis l'interface d'administration web de Geoserver
-![alt tag](https://drive.google.com/file/d/0B0wRlQ5u5OCuNjBTcHBld3B6TUk/view?usp=sharing)- Depuis putty en ligne de commande ou depuis winscp: Récpération du Workspace
+![alt tag](https://doc-0o-58-docs.googleusercontent.com/docs/securesc/v559n3rekbtpch85mgddk9ug8mr41ack/edg1vpr1dueqh3uddqr639l18ugg8klq/1465293600000/16812825424592245321/16812825424592245321/0B0wRlQ5u5OCuNjBTcHBld3B6TUk?e=download&nonce=77n87bb7l14n8&user=16812825424592245321&hash=fd3q0ijt3smvsiocpgmpdsksth7rbpo0)- Depuis putty en ligne de commande ou depuis winscp: Récpération du Workspace
 		rsync -av /repertoire_du_workspace repertoire_des_backup
 
 - Récuperation de la base de données PostGis:
