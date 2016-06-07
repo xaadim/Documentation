@@ -21,7 +21,7 @@ Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse 
 
 - ou depuis WinSCP (dans cet exemple) ou autre protocole SSH
 
-<h4>2-Récuperation de la base de données PostGIS</h4>
+<h4>2- Récuperation de la base de données PostGIS</h4>
 - Si c'est une base complète à récupérer:
 	<pre class="lang:default decode:true">
 		sudo pg_dump -h [SERVEUR] -p [PORT]  -d [base_de_donnees] > /home/systel/backup/mabase.sql
@@ -32,7 +32,7 @@ Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse 
 	</pre>
 
 
-<h4>3-Extraction des données de la machine virtuelle (VM) vers une machine physique (Windows dans cet exemple) </h4>
+<h4>3- Extraction des données de la machine virtuelle (VM) vers une machine physique (Windows dans cet exemple) </h4>
 
 - sur Winscp, copier le repertoire backup depuis serveur de la VM vers un repertoire de sauvegarde sur Windows.
 - en ligne de commande DOS :
