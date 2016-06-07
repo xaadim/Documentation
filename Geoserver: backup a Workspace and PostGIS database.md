@@ -12,20 +12,19 @@ Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse 
 - en ligne de commande: 
 	<pre class="lang:default decode:true">
 		# créer un répertoire pour les sauvegardes (backup) pour assurer la copie des fichiers
-		sudo mkdir /home/utilisateur/backup
+		sudo mkdir /home/systel/backup
 		# lui attribuer tous les droits 
-		sudo chmod -R 777 /home/utilisateur/backup
+		sudo chmod -R 777 /home/systel/backup
 		# maintenant copier le workspace SDIS35 dans notre repertoire backup
-		sudo rsync -av /mnt/shared/geoserver_data /home/utilisateur/backup
+		sudo rsync -av /mnt/shared/geoserver_data /home/systel/backup
 	</pre>
 
 - ou depuis WinSCP (dans cet exemple) ou autre protocole SSH
 
 <h4>2-Récuperation de la base de données PostGis</h4>
 	<pre class="lang:default decode:true">
-	
+		sudo pg_dump -h 000.000.000.000 -p 0000  -d nom_de_la_base > /home/systel/mabase.sql
 	</pre>
-- Creer un scrip.php pour les sauvegardes en ligne de commande. 
 
 Maintenant récupération des données de la VM vers Windows
 
