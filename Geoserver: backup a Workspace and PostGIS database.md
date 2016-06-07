@@ -22,10 +22,14 @@ Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse 
 - ou depuis WinSCP (dans cet exemple) ou autre protocole SSH
 
 <h4>2-Récuperation de la base de données PostGis</h4>
+- Si c'est une base complète à récupérer:
 	<pre class="lang:default decode:true">
-		sudo pg_dump -h 000.000.000.000 -p 0000  -d nom_de_la_base > /home/systel/mabase.sql
+		sudo pg_dump -h [SERVEUR] -p [PORT]  -d [base_de_donnees] > /home/systel/mabase.sql
 	</pre>
-
+- Si c'est un schèma ou une table précise:
+	<pre class="lang:default decode:true">
+	 sudo pg_dump -h [SERVEUR] -p [PORT] -d [BDD] -U [USERBDD] --column-inserts -t [SCHEMA].[TABLE] > /[CHEMIN_FICHIER_SQL]/[NOM].sql
+	</pre>
 Maintenant récupération des données de la VM vers Windows
 
 - 1# Utilisez Winscp (facile)
