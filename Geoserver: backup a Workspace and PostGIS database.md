@@ -11,7 +11,7 @@ Nous essayons de récuperer le workspace de SDIS35 dans cet exemple. La premièr
 Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse (SDIS35 dans cet exemple):
 - en ligne de commande: 
 	<pre class="lang:default decode:true">
-		# créer un répertoire pour les sauvegardes (backup)
+		# créer un répertoire pour les sauvegardes (backup) pour assurer la copie des fichiers
 		sudo mkdir /home/utilisateur/backup
 		# lui attribuer tous les droits 
 		sudo chmod -R 777 /home/utilisateur/backup
@@ -22,11 +22,9 @@ Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse 
 - ou depuis WinSCP (dans cet exemple) ou autre protocole SSH
 
 <h4>2-Récuperation de la base de données PostGis</h4>
-	creer un user linux systel 
-	se connecter avec systel
-	creer un repertoire pour les backup avec droit 777
-	sudo -su systel
-	dump base de donnée dans le repertoire
+	<pre class="lang:default decode:true">
+	
+	</pre>
 - Creer un scrip.php pour les sauvegardes en ligne de commande. 
 
 Maintenant récupération des données de la VM vers Windows
