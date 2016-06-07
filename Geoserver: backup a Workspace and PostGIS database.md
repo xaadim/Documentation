@@ -22,13 +22,12 @@ Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse 
 - ou depuis WinSCP (dans cet exemple) ou autre protocole SSH
 
 <h4>2-Récuperation de la base de données PostGis</h4>
-		creer un user linux systel 
-		se connecter avec systel
-		creer un repertoire pour les backup avec droit 777
-		sudo -su systel
-		dump base de donnée dans le repertoire
+	creer un user linux systel 
+	se connecter avec systel
+	creer un repertoire pour les backup avec droit 777
+	sudo -su systel
+	dump base de donnée dans le repertoire
 - Creer un scrip.php pour les sauvegardes en ligne de commande. 
-
 
 Maintenant récupération des données de la VM vers Windows
 
