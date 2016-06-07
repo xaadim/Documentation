@@ -1,13 +1,14 @@
 ### Récupérer un Workspace de Geoserver d'un serveur à un autre ainsi que sa base de données PostGIS.
-<h4>le Workspace Géoserver</h4>
+<h4>1- Le Workspace Géoserver</h4>
 Nous essayons de récuperer le workspace de SDIS35 dans cet exemple. La première chose à faire est de trouver le répertoire de données de Geoserver dans lequel se trouve le dossier Workspaces. Nous avons deux possibilités:
-- en ligne de commande en faisant une recherche du répertoire geoserver:
+- en ligne de commande en effectuant une recherche du répertoire geoserver:
 	<pre class="lang:default decode:true">
 		sudo find / -name "geoserver*"
 	</pre>
 - depuis l'interface d'administration web de Geoserver, cliquer sur 'Etat du service' et vous aurez le chemin du répertoire où se trouve les données de Geoserver. 
 ![alt tag](http://res.cloudinary.com/systel/image/upload/v1465299032/1_is4rr0.png)
 
+Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse (SDIS35 dans cet exemple). 
 
 - Depuis putty en ligne de commande ou depuis winscp: Récpération du Workspace
 		rsync -av /repertoire_du_workspace repertoire_des_backup
