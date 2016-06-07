@@ -21,7 +21,7 @@ Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse 
 
 - ou depuis WinSCP (dans cet exemple) ou autre protocole SSH
 
-<h4>2-Récuperation de la base de données PostGis</h4>
+<h4>2-Récuperation de la base de données PostGIS</h4>
 - Si c'est une base complète à récupérer:
 	<pre class="lang:default decode:true">
 		sudo pg_dump -h [SERVEUR] -p [PORT]  -d [base_de_donnees] > /home/systel/backup/mabase.sql
@@ -32,17 +32,15 @@ Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse 
 	</pre>
 
 
-Maintenant récupération des données de la VM vers Windows
+<h4> Extraction des données de la machine virtuelle (VM) vers une machine physique (Windows dans cet exemple) </h4>
 
-- 1# Utilisez Winscp (facile)
-- 2# En ligne de commande DOS : set PATH=C\vers_putty_folder
-	* un seul fichier: pscp.exe systel@192.168.56.101:/repertoire_du_fichier/fichier.format repertoire_windows
-	* dossier (plusieurs données) :  pscp.exe -r  systel@192.168.56.101:/repertoire_du_fichier  repertoire_windows
-	* 
-
-<pre class="lang:default decode:true">sudo apt-get install apache2
-sudo apt-get install php5
-
-</pre>
-
-
+- sur Winscp, copier le repertoire backup depuis serveur de la VM vers un repertoire de sauvegarde sur Windows.
+- en ligne de commande DOS :
+	<pre class="lang:default decode:true">
+		set PATH=C\vers_putty_folder
+		#copie d'un seul fichier: 
+		pscp [USER]@[SERVEUR]:/repertoire_du_fichier/fichier.format repertoire_windows
+		#copie d'un dossier entier : 
+		pscp -r  [USER]@[SERVEUR]:/repertoire  repertoire_windows
+	</pre>
+	
