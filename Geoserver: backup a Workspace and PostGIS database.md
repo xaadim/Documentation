@@ -19,7 +19,7 @@ Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse 
 		sudo rsync -av /mnt/shared/geoserver_data /home/utilisateur/backup
 	</pre>
 
-- depuis WinSCP ou autre protocole SSH
+- depuis WinSCP (dans cet exemple) ou autre protocole SSH
 
 - Récuperation de la base de données PostGis:
 		creer un user linux systel 
