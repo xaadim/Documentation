@@ -19,9 +19,9 @@ Maintenant récupération des données de la VM vers Windows
 	* dossier (plusieurs données) :  pscp.exe -r  systel@192.168.56.101:/repertoire_du_fichier  repertoire_windows
 	* 
 	
-Dans cet article, je vous montre une installation rapide du Framework Symfony2 sur une distribution Ubuntu. Le même processus d’installation peut être utilisé pour les autres distributions de Linux.
+<h4>Comment récupérer un Workspace de Geoserver d'un serv, Apache et MySql/PostgreSQL/PostGis</strong></h4>
 
-Pour installer Symfony2, il faut d'abord un environnement de travail qui va accueillir l'installation du Framework.
+
 <h4><strong>1- Installation PHP, Apache et MySql/PostgreSQL/PostGis</strong></h4>
 Installons d'abord les paquets nécessaires au fonctionnement de l'application. Nous allons utiliser les lignes de commande. Pour la base gestion de la base de données, nous êtes libre de choisir entre MySql ou PostgreSql. Dans cet exemple, nous installons MySql.
 
