@@ -1,3 +1,4 @@
+![alt tag](https://cloud.githubusercontent.com/assets/3968618/9588666/d029268e-5029-11e5-8a0c-41ecd04207f4.png)
 - Depuis putty en ligne de commande ou depuis winscp: Récpération du Workspace
 		rsync -av /repertoire_du_workspace repertoire_des_backup
 
