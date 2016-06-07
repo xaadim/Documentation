@@ -8,10 +8,18 @@ Nous essayons de récuperer le workspace de SDIS35 dans cet exemple. La premièr
 - depuis l'interface d'administration web de Geoserver, cliquer sur 'Etat du service' et vous aurez le chemin du répertoire où se trouve les données de Geoserver. 
 ![alt tag](http://res.cloudinary.com/systel/image/upload/v1465299032/1_is4rr0.png)
 
-Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse (SDIS35 dans cet exemple). 
+Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse (SDIS35 dans cet exemple):
+- en ligne de commande: 
+	<pre class="lang:default decode:true">
+		# créer un répertoire pour les sauvegardes (backup)
+		sudo mkdir /home/utilisateur/backup
+		# lui attribuer tous les droits 
+		sudo chmod -R 777 /home/utilisateur/backup
+		# maintenant copier le workspace SDIS35 dans notre repertoire backup
+		sudo rsync -av /mnt/shared/geoserver_data /home/utilisateur/backup
+	</pre>
 
-- Depuis putty en ligne de commande ou depuis winscp: Récpération du Workspace
-		rsync -av /repertoire_du_workspace repertoire_des_backup
+- depuis WinSCP ou autre protocole SSH
 
 - Récuperation de la base de données PostGis:
 		creer un user linux systel 
