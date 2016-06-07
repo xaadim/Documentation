@@ -1,3 +1,5 @@
+<h4>Comment récupérer un Workspace de Geoserver d'un serveur à un autre ainsi que sa base de données PostGIS.</h4>
+
 ![alt tag](#)
 - Depuis putty en ligne de commande ou depuis winscp: Récpération du Workspace
 		rsync -av /repertoire_du_workspace repertoire_des_backup
@@ -18,9 +20,6 @@ Maintenant récupération des données de la VM vers Windows
 	* un seul fichier: pscp.exe systel@192.168.56.101:/repertoire_du_fichier/fichier.format repertoire_windows
 	* dossier (plusieurs données) :  pscp.exe -r  systel@192.168.56.101:/repertoire_du_fichier  repertoire_windows
 	* 
-	
-<h4>Comment récupérer un Workspace de Geoserver d'un serveur à un autre ainsi que sa base de données PostGIS.</h4>
-
 
 <pre class="lang:default decode:true">sudo apt-get install apache2
 sudo apt-get install php5
