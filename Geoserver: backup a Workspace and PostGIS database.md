@@ -11,9 +11,9 @@ Nous essayons de récuperer le workspace de SDIS35 dans cet exemple. La premièr
 Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse (SDIS35 dans cet exemple):
 - en ligne de commande: 
 	<pre class="lang:default decode:true">
-		# créer un répertoire pour les sauvegardes (backup) pour assurer la copie des fichiers
+		# créer un répertoire pour les sauvegardes (backup) 
 		sudo mkdir /home/systel/backup
-		# lui attribuer tous les droits 
+		# lui attribuer tous les droits pour assurer la copie des fichiers
 		sudo chmod -R 777 /home/systel/backup
 		# maintenant copier le workspace SDIS35 dans notre repertoire backup
 		sudo rsync -av /mnt/shared/geoserver_data /home/systel/backup
