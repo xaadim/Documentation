@@ -71,7 +71,7 @@ Dans cet exemple, le workspace eca_vaud comporte aussi un entrepôt  PostGIS dan
 
 Le fichier ressemble à ça: 
 ```sql
-	<dataStore>
+<dataStore>
   <id>DataStoreInfoImpl-2624860f:15405489c07:-4592</id>
   <name>eca_vaud_postgis</name>
   <type>PostGIS</type>
