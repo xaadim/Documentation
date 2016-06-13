@@ -16,7 +16,7 @@ Cependant, avant de commencer la copie, nous allons créer un dossier en local p
 - ou depuis WinSCP ou autre protocole SSH...
 
 <h4>2- Récuperation de la base de données PostGIS</h4>
-Créer un répertoire pour le backup de la base.
+Créer un répertoire pour le backup de la base:
 <pre class="lang:default decode:true">
 	mkdir /home/syel/backup
 </pre>
@@ -24,11 +24,11 @@ Ajouter le droit d'écriture à ce dossier
 <pre class="lang:default decode:true">
 	chmod a+w /home/syel/backup
 </pre>
-*Si c'est une base complète à récupérer:
+* Si c'est une base complète à récupérer:
 	<pre class="lang:default decode:true">
 		sudo pg_dump -h [SERVEUR] -p [PORT]  -d [nom_de_la_base_de_donnees] > /home/systel/backup/nom_de_la_base_de_donnees.sql
 	</pre>
-*Si c'est un schèma ou une table précise:
+* Si c'est un schèma ou une table précise:
 	<pre class="lang:default decode:true">
 	 sudo pg_dump -h [SERVEUR] -p [PORT] -d [BDD] -U [USERBDD] --column-inserts -t [SCHEMA].[TABLE] > /home/systel/backup/ma_table.sql
 	</pre>
@@ -39,7 +39,6 @@ Ajouter le droit d'écriture à ce dossier
 
 <h4>3- Restauration du workspace et de la base de données dans un autre serveur </h4>
 a- Créer une base de données PostGIS nommée aussi eca_vaud: 
-
 	- Sois directement via PgAdmin III
 	- Sois en ligne de commande avec un utilisateur postgres
 <pre class="lang:default decode:true">
@@ -71,7 +70,7 @@ Si workspace copié apparait dans la liste de nos workspaces, ça marche, sinon 
 Dans cet exemple, le workspace eca_vaud comporte aussi un entrepôt  PostGIS dans lequel se trouvent des couches utilisés dans les agrégations de couches. Pour les restaurer tous en même temps, il faut modifier manuellement le fichier datastore.xml de l'entrepôt dans lequel Geoserver stocke les informations de connexion à la base de données de PostGIS. Ce fichier se trouve dans /workspaces/eca_vaud/eca_vaud_postgis. 
 
 Le fichier ressemble à ça: 
-<pre class="lang:default decode:true">
+```sql
 	<dataStore>
   <id>DataStoreInfoImpl-2624860f:15405489c07:-4592</id>
   <name>eca_vaud_postgis</name>
@@ -110,7 +109,7 @@ Le fichier ressemble à ça:
   </connectionParameters>
   <__default>false</__default>
 </dataStore>
-</pre>
+```
 
 L'objectif est de gardé l'ID du Datastore (DataStoreInfoImpl-2624860f:15405489c07:-4592) qui est déjà utilisé dans les couches qui se trouvent dans le répertoire workspace qu'on a sauvegardé. Nous allons changé donc les entrées qui se trouvent dans <connectionParameters> .... </connectionParameters>.
 ***Attention: on peut choisir de modifier ce fichier à la main, mais le problème va être le mot de passe qui est ici crypté. La meilleure des solutions est de tricher un peu en créant un entrepôt PostGIS sous le nom de 'test_postgis' par exemple avec en entrant les paramètres connexion à la base de données  
