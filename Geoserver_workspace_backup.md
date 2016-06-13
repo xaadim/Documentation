@@ -44,4 +44,3 @@ Une fois le répertoire trouvé, on récupère le workspace qui nous intéresse 
 		pscp -r  [USER]@[SERVEUR]:/repertoire  repertoire_windows
 	</pre>
 	
-Test
