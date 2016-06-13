@@ -15,10 +15,10 @@ Cependant, avant de commencer la copie, nous allons créer un dossier en local p
 
 - ou depuis WinSCP ou autre protocole SSH...
 
-<h4>2- Récuperation de la base de données PostGIS</h4>
+<h4>2- Récupération de la base de données PostGIS</h4>
 Créer un répertoire pour le backup de la base:
 <pre class="lang:default decode:true">
-	mkdir /home/syel/backup
+	mkdir /home/systel/backup
 </pre>
 Ajouter le droit d'écriture à ce dossier
 <pre class="lang:default decode:true">
@@ -51,7 +51,7 @@ a- Créer une base de données PostGIS nommée aussi eca_vaud:
 	# CRTL + D pour sortir de psql
 </pre>
 
-Maintenant, il faut restaurer la base de données dumpée précedemment dans la nouvelle base:
+Maintenant, il faut restaurer la base de données dumpée précédemment dans la nouvelle base:
 
 <pre class="lang:default decode:true">
 	# Se connecter avec un utilisateur postgres
@@ -62,8 +62,8 @@ Maintenant, il faut restaurer la base de données dumpée précedemment dans la 
 	# CRTL + D pour sortir de psql
 </pre>
 
-b- Avec Winscp, copier le repertoire le workspace sauvegardé précedemment dans 'GEOSERVER_DATA_DIR' du nouveau serveur.
-Une fois la copie terminée, redémarrer Geoserver et se connecter à l'interfaca d'administration pour vérifier si la copie du workspace a bien marché. 
+b- Avec Winscp, copier le repertoire le workspace sauvegardé précédemment dans 'GEOSERVER_DATA_DIR' du nouveau serveur.
+Une fois la copie terminée, redémarrer Geoserver et se connecter à l'interface d'administration pour vérifier si la copie du workspace a bien marché. 
 
 Si workspace copié apparait dans la liste de nos workspaces, ça marche, sinon recommencer la copie et redémarrer Geoserver. 
 
@@ -111,9 +111,10 @@ Le fichier ressemble à ça:
 </dataStore>
 ```
 
-L'objectif est de gardé l'ID du Datastore (DataStoreInfoImpl-2624860f:15405489c07:-4592) qui est déjà utilisé dans les couches qui se trouvent dans le répertoire workspace qu'on a sauvegardé. Nous allons changé donc les entrées qui se trouvent dans <connectionParameters> .... </connectionParameters>.
+L'objectif est de garder l'ID du Datastore (DataStoreInfoImpl-2624860f:15405489c07:-4592) qui est déjà utilisé dans les couches qui se trouvent dans le répertoire workspace qu'on a sauvegardé. Nous allons changé donc les entrées qui se trouvent dans <connectionParameters> .... </connectionParameters>.
 <br>
 * Attention: on peut choisir de modifier ce fichier à la main, mais le problème va être le mot de passe qui est ici crypté. La meilleure des solutions est de tricher un peu en créant un entrepôt PostGIS sous le nom de 'test_postgis' par exemple avec en entrant les paramètres connexion de la base de données souhaitée. Un fichier datastore.xml sera alors généré dans le dossier /workspaces/eca_vaud/test_postgis. Copier les entrées dans <connectionParameters> .... </connectionParameters> pour les coller dans notre datastore.xml qui se trouve dans /workspaces/eca_vaud/eca_vaud_postgis, ainsi nous aurons toutes les paramètres de connexions ainsi que le mot de passe bien crypé. 
 
 Redémarrer Geoserver et tester. 
+
 
