@@ -70,7 +70,7 @@ Si workspace copié apparait dans la liste de nos workspaces, ça marche, sinon 
 Dans cet exemple, le workspace eca_vaud comporte aussi un entrepôt  PostGIS dans lequel se trouvent des couches utilisés dans les agrégations de couches. Pour les restaurer tous en même temps, il faut modifier manuellement le fichier datastore.xml de l'entrepôt dans lequel Geoserver stocke les informations de connexion à la base de données de PostGIS. Ce fichier se trouve dans /workspaces/eca_vaud/eca_vaud_postgis. 
 
 Le fichier ressemble à ça: 
-<pre class="lang:xml decode:true">
+```sql
 	<dataStore>
   <id>DataStoreInfoImpl-2624860f:15405489c07:-4592</id>
   <name>eca_vaud_postgis</name>
@@ -109,7 +109,7 @@ Le fichier ressemble à ça:
   </connectionParameters>
   <__default>false</__default>
 </dataStore>
-</pre>
+```
 
 L'objectif est de gardé l'ID du Datastore (DataStoreInfoImpl-2624860f:15405489c07:-4592) qui est déjà utilisé dans les couches qui se trouvent dans le répertoire workspace qu'on a sauvegardé. Nous allons changé donc les entrées qui se trouvent dans <connectionParameters> .... </connectionParameters>.
 ***Attention: on peut choisir de modifier ce fichier à la main, mais le problème va être le mot de passe qui est ici crypté. La meilleure des solutions est de tricher un peu en créant un entrepôt PostGIS sous le nom de 'test_postgis' par exemple avec en entrant les paramètres connexion à la base de données  
