@@ -1,6 +1,6 @@
 ### Récupération d'un Workspace de Geoserver. 
 
-<h4>1- Copie du workspace Geoserver</h4>
+<h4>1- Copie du workspace</h4>
 Nous essayons de récuperer le workspace de eca_vaud dans cet exemple. La première chose à faire est de trouver le 'GEOSERVER_DATA_DIR', c'est-à-dire, le répertoire de données de Geoserver dans lequel se trouve les workspaces. Pour trouver ce répertoire, depuis l'interface d'administration web de Geoserver, cliquer sur 'Etat du service' et vous aurez le chemin du répertoire où se trouve les données de Geoserver. 
 ![alt tag](http://res.cloudinary.com/systel/image/upload/v1465299032/1_is4rr0.png)
 
