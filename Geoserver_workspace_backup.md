@@ -11,6 +11,8 @@ Cependant, avant de commencer la copie, nous allons créer un dossier en local p
 - en ligne de commande: 
 	<pre class="lang:default decode:true">
 		scp -rp user@host.com:/geoserver_data/ C:/temp/backup_geoserver/workspaces
+                #ou vers un autre serveur
+		scp -rp /mnt/shared/geoserver_data/workspaces/eca_vaud/ [user]@[host]:/mnt/shared/geoserver_data/workspaces/
 	</pre>
 
 - ou depuis WinSCP ou autre protocole SSH...
