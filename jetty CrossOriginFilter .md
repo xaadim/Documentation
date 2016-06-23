@@ -1,3 +1,4 @@
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <filter>
@@ -23,3 +24,4 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 </web-app>
+```
