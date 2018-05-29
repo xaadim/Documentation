@@ -1,44 +1,55 @@
 ## Openlayers offlineMap Service
 
-Service pour créer une carte hors ligne dans Openlayers v3.xx v4.X en se basant sur les couches cachées de Geoserver en local.
+Service pour créer une carte hors ligne dans Openlayers v4.6.4 ou plus en se basant sur les couches cachées de Geowebcache via GeoServer 2.12.x.
 
-## Installation : 
+## OPENLAYERS
+Ce service nécessite une installation de Openlayers v4.6.4 ou plus. Merci de vérifier la version de Openlayers dans votre projet. 
+
+## INSTALLATION: 
 
 - Attacher le fichier offlineMapService.js dans votre projet. 
-- Ajouter le module 'offlineTilesModule' dans votre projet  angular. 
-
-## Utilisation : 
- 
+```html 
+    <script src="offlineTilesService.js" type="text/javascript"></script>
+ ```
+- Ajouter le module 'offlineTilesModule' dans votre projet. 
 ```javascript
-// Ajout de la couche 
-offlineTilesService.createOffLineTiles(gridSetParams, layerParams, map);
+    myApp.controller('myCtrl', function ($scope, offlineTilesService){});
 ```
-### gridSetParams : paramètres de la grille de projection récupérée depuis Geoserver
+## PARAMETRES:
+### gridSetParams: paramètres de la grille de projection récupérée depuis Geoserver
 
 exemple : 
  ```javascript
-var gridSetParams = {
-    name : 'EPSG:27572_sdis17_2000',
-    extent : [225000, 1910000, 533000, 2240000],
-    resolutions : [209.99999999999997, 140 ,70 , 27.999999999999996,
-    13.999999999999998, 6.999999999999999, 5.6, 4.199999999999999, 2.8, 1.4, 0.5599999999999999, 0.27999999999999997],
-    projection : 'EPSG:27572',
-    tileHeight : 2000,
-    tileWidth  : 2000
-  };	
+    var gridSetParams = {
+        name : 'EPSG_27572_sdis17_mobile',
+        extent : [225000, 1910000, 533000, 2240000],
+        resolutions : [210, 140, 70, 28, 14, 7, 5.6, 4.2, 2.8, 1.4, 0.56, 0.28],
+        projection : 'EPSG:27572',
+        tileHeight : 1024,
+        tileWidth  : 1024
+    };	
 ```
 
-
-### layerParams : paramètres de la couche
+### layerParams: paramètres de la couche
 
 exemple : 
 ```javascript
-var layerParams ={
-    baseUrl : 'offlineTiles', // dossier de base des images cachées
-    layerName :'sdis17_vecteur_complet',  // nom de la couche 
-    extension : 'png', // extension des images cachées {si pas définie, png est choisie par défaul}
-    projection : gridSetParams.projection, // Projection des images 
-};
+    var layerParams = {
+        baseUrl : 'offlineTiles', // dossier de base des images cachées
+        layerName :'sdis17_vecteur_complet'  // nom de la couche
+    };
 ```
 
-### map : la carte Openlayers
+## UTILISATION: 
+ 
+```javascript
+    //création d'une couche offline de type image (png)
+    var imageTile  = offlineTilesService.createOffLineTilesImage(gridSetParams, layerParams);
+    map.addLayer(imageTile);
+```
+
+```javascript
+    //création d'une couche offline de type image (png)
+    var vectorTile = offlineTilesService.createOffLineTilesVector(gridSetParams, layerParams);
+    map.addLayer(vectorTile);
+```
